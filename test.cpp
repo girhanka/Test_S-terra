@@ -20,7 +20,7 @@ void thr(std::list<uint16_t> &lst, bool bit, uint32_t &bitcount, uint32_t &count
         
         if (it == lst.end()) 
             break;
-        // count zeros in *it bitset
+        // count '0' and '1' in *it bitset
         bitcount += bit ? (std::bitset<16>(*it).count()) : (std::bitset<16>(*it).size() - std::bitset<16>(*it).count());
         count_thr++;
         //bit ? lst.pop_back() : lst.pop_front();
